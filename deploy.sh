@@ -5,8 +5,13 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "deploy.sh" \
-		--exclude "README.md" --exclude "LICENSE-MIT.txt" -avh --no-perms . ~;
+    mkdir ~/.ncmpcpp ~/.mpd ~/.mpdscribble;
+    cp ncmpcpp ~./ncmpcpp/config;
+    cp mpdscribble.conf ~/.mpdscribble;
+    cp .bash_profile ~;
+    cp .vimrc ~;
+    cp .mpdconf ~;
+    cp .aliases ~;
 	source ~/.bash_profile;
 }
 
@@ -17,9 +22,6 @@ else
 	echo "";
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
 		doIt;
-        mkdir ~/.mpdscribble ~/.ncmpcpp;
-        cp ncmpcpp ~/.ncmpcpp/config;
-        cp mpdscribble.conf ~/.mpdscribble/;
 	fi;
 fi;
 unset doIt;
