@@ -2,7 +2,6 @@
 alias ..="cd .."
 
 # Shortcuts
-alias g="git"
 alias h="history"
 alias music="mpd & mpdscribble & ncmpcpp"
 alias killmusic="killall mpd && killall mpdscribble && killall ncmpcpp"
@@ -28,3 +27,7 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+# Git
+alias g="git"
+alias push="git push origin master"

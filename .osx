@@ -523,6 +523,12 @@ defaults write com.twitter.twitter-mac ShowFullNames -bool true
 defaults write com.twitter.twitter-mac HideInBackground -bool true
 
 ###############################################################################
+# iTerm2.app                                                                  #
+###############################################################################
+open "/iterm2/dotshare.itermcolors"
+
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
