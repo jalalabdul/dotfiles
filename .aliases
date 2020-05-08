@@ -31,3 +31,7 @@ alias reload="exec $SHELL -l"
 # Git
 alias g="git"
 alias push="git push origin master"
+
+# Jekyll
+alias js="bundle exec jekyll serve --config _config.yml,_config_dev.yml 2>&1 | egrep -v 'deprecated|other_annoying_word'"
+alias jb="bundle exec jekyll serve --config _config.yml 2>&1 | egrep -v 'deprecated|other_annoying_word'"
