@@ -12,8 +12,12 @@ alias reload="exec $SHELL -l"
 # Git
 alias g="git"
 alias push="git push origin master"
+alias gssh="sh ~/.scripts/github_https_ssh.sh"
 
 # Jekyll
 alias js="bundle exec jekyll serve --config _config.yml,_config_dev.yml 2>&1 | egrep -v 'deprecated|other_annoying_word'"
 alias jb="bundle exec jekyll build --config _config.yml 2>&1 | egrep -v 'deprecated|other_annoying_word'"
 alias jp="git add . && git commit -m 'update' && git push origin master && sh ~/.scripts/purgecloudflarecache.sh"
+
+# Misc
+alias p="ping 8.8.8.8"
